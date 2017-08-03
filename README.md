@@ -36,3 +36,9 @@ to describe your new [Custom Transformer](https://docs.safe.com/fme/html/FME_Des
 Copy the **FMEDotNetWrapperFactory.dll** file to your FME plugins folder (e.g. *%PROGRAMFILES%\FME\FME2017\plugins*).
 Now, you can create, execute and debug your own Custom Transformer with .NET code!
 
+## How to develop
+
+The SDK provides some .NET Custom Transformer samples for you can learn to use it.
+
+* [HelloWorld](./FMEDotNetHelloWorld):
+  A very simple HelloWorld Custom Transformer. It only reads all attributes from input features, and then returns them to output.

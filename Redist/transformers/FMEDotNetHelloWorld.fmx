@@ -1,0 +1,52 @@
+# =========================================================================
+TRANSFORMER_NAME: FMEDotNetHelloWorld
+# =========================================================================
+
+VERSION: 0
+
+CATEGORY: Samples
+
+INPUT_TAGS: <BLANK>
+
+OUTPUT_TAGS: OUTPUT
+
+PRESERVES_ATTRIBUTES: Yes
+
+FEATURE_HOLDING: NONE
+
+ATTRIBUTES_ADDED:
+
+PARAMETER_NAME: TRANSFORMER_GROUP
+PARAMETER_TYPE: GROUP XFORMER_NAME
+PARAMETER_PROMPT: Transformer
+PARAMETER_DEFAULT:
+
+PARAMETER_NAME: PARAMETERS_GROUP
+PARAMETER_TYPE: GROUP DEST_ATTR
+PARAMETER_PROMPT: Parameters
+PARAMETER_DEFAULT:
+
+PARAMETER_NAME: DEST_ATTR
+PARAMETER_TYPE: STRING
+PARAMETER_PROMPT: Message to say:
+PARAMETER_DEFAULT: Hello World!
+
+TOOLTIP_START
+HelloWorld sample of a DotNet custom Transformer
+TOOLTIP_END
+
+# =========================================================================
+
+TEMPLATE_START
+
+FACTORY_DEF * FMEDotNetWrapperFactory
+   FACTORY_NAME $(XFORMER_NAME)
+   $(INPUT_LINES)
+   DOTNET_ASSEMBLY_FILENAME FMEDotNetHelloWorld.dll
+   DOTNET_ASSEMBLY_FACTORY_NAME FMEDotNetHelloWorldFactory
+   MESSAGE_TO_SAY_ATTR "$(DEST_ATTR)"
+   OUTPUT OUTPUT FEATURE_TYPE $(OUTPUT_OUTPUT_FTYPE) $(OUTPUT_OUTPUT_FUNCS)
+
+TEMPLATE_END
+
+# =========================================================================
