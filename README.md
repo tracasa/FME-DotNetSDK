@@ -42,3 +42,5 @@ The SDK provides some .NET Custom Transformer samples for you can learn to use i
 
 * [HelloWorld](./FMEDotNetHelloWorld):
   A very simple HelloWorld Custom Transformer. It only reads all attributes from input features, and then returns them to output.
+* [DotNetCaller](./FMEDotNetCallerSample):
+  Provides a Custom Transformer to execute .NET modules using the SDK. It allows to configure the .NET assembly to run and the parameters to inject.
