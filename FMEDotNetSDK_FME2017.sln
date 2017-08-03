@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "FMEDotNetWrapperFactory", "FMEDotNetWrapperFactory\FMEDotNetWrapperFactory.vcxproj", "{80E4944D-3BD9-4BC0-AC77-E038C91363AF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|Mixed Platforms = Debug|Mixed Platforms
+		Debug|Win32 = Debug|Win32
+		Debug|x64 = Debug|x64
+		Release|Any CPU = Release|Any CPU
+		Release|Mixed Platforms = Release|Mixed Platforms
+		Release|Win32 = Release|Win32
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{80E4944D-3BD9-4BC0-AC77-E038C91363AF}.Debug|Any CPU.ActiveCfg = Debug|x64
+		{80E4944D-3BD9-4BC0-AC77-E038C91363AF}.Debug|Mixed Platforms.ActiveCfg = Debug|x64
+		{80E4944D-3BD9-4BC0-AC77-E038C91363AF}.Debug|Mixed Platforms.Build.0 = Debug|x64
+		{80E4944D-3BD9-4BC0-AC77-E038C91363AF}.Debug|Win32.ActiveCfg = Debug|Win32
+		{80E4944D-3BD9-4BC0-AC77-E038C91363AF}.Debug|Win32.Build.0 = Debug|Win32
+		{80E4944D-3BD9-4BC0-AC77-E038C91363AF}.Debug|x64.ActiveCfg = Debug|x64
+		{80E4944D-3BD9-4BC0-AC77-E038C91363AF}.Debug|x64.Build.0 = Debug|x64
+		{80E4944D-3BD9-4BC0-AC77-E038C91363AF}.Release|Any CPU.ActiveCfg = Release|x64
+		{80E4944D-3BD9-4BC0-AC77-E038C91363AF}.Release|Mixed Platforms.ActiveCfg = Release|x64
+		{80E4944D-3BD9-4BC0-AC77-E038C91363AF}.Release|Mixed Platforms.Build.0 = Release|x64
+		{80E4944D-3BD9-4BC0-AC77-E038C91363AF}.Release|Win32.ActiveCfg = Release|Win32
+		{80E4944D-3BD9-4BC0-AC77-E038C91363AF}.Release|Win32.Build.0 = Release|Win32
+		{80E4944D-3BD9-4BC0-AC77-E038C91363AF}.Release|x64.ActiveCfg = Release|x64
+		{80E4944D-3BD9-4BC0-AC77-E038C91363AF}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
