@@ -1,0 +1,66 @@
+# =========================================================================
+TRANSFORMER_NAME: SingleTester
+# =========================================================================
+
+VERSION: 0
+
+CATEGORY: Filters
+
+INPUT_TAGS: <BLANK>
+
+OUTPUT_TAGS: PASSED FAILED
+
+PRESERVES_ATTRIBUTES: yes
+
+FEATURE_HOLDING: ALL
+
+ATTRIBUTES_ADDED:
+
+PARAMETER_NAME: TRANSFORMER_GROUP
+PARAMETER_TYPE: GROUP XFORMER_NAME
+PARAMETER_PROMPT: Transformer
+PARAMETER_DEFAULT:
+
+PARAMETER_NAME: PARAMETERS_GROUP
+PARAMETER_TYPE: GROUP LHS%OPERATOR%RHS
+PARAMETER_PROMPT: Parameters
+PARAMETER_DEFAULT:
+
+PARAMETER_NAME: LHS
+PARAMETER_TYPE: ATTR
+PARAMETER_PROMPT: Left hand operand:
+PARAMETER_DEFAULT:
+
+PARAMETER_NAME: OPERATOR
+PARAMETER_TYPE: CHOICE =%<%>%>=%<=%!=%"Begins With"%"Ends With"%NonEmptyValue%"Is Missing"
+PARAMETER_PROMPT: Operator (OR implicit):
+PARAMETER_DEFAULT: =
+
+PARAMETER_NAME: RHS
+PARAMETER_TYPE: OPTIONAL TEXT_OR_ATTR
+PARAMETER_PROMPT: Right hand operand:
+PARAMETER_DEFAULT:
+
+TOOLTIP_START
+This tester only allows a single test clause but it runs faster than generic tester.
+Test: $(LHS) $(OPERATOR) $(RHS)
+TOOLTIP_END
+
+# =========================================================================
+
+TEMPLATE_START
+
+FACTORY_DEF * FMEDotNetWrapperFactory
+   FACTORY_NAME $(XFORMER_NAME)
+   $(INPUT_LINES)
+   DOTNET_ASSEMBLY_FILENAME FMEDotNetSingleTester.dll
+   DOTNET_ASSEMBLY_FACTORY_NAME FMEDotNetSingleTesterFactory
+   LHS_ATTR "$(LHS)"
+   OPERATOR_ATTR "$(OPERATOR)"
+   RHS_ATTR "$(RHS)"
+   OUTPUT PASSED FEATURE_TYPE $(OUTPUT_PASSED_FTYPE) $(OUTPUT_PASSED_FUNCS)
+   OUTPUT FAILED FEATURE_TYPE $(OUTPUT_FAILED_FTYPE) $(OUTPUT_FAILED_FUNCS)
+
+TEMPLATE_END
+
+# =========================================================================
