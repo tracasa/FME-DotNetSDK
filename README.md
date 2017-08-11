@@ -20,12 +20,13 @@ to describe your new [Custom Transformer](https://docs.safe.com/fme/html/FME_Des
 
 ## How to build
 
-* Download and install the [FME Plug-in SDK](https://knowledge.safe.com/articles/797/developing-a-new-transformer-using-the-fme-plug-in.html).
-* Open the solution file in root folder and build your desired architecture (x86 or x64).
+1. Download and install the [FME Plug-in SDK](https://knowledge.safe.com/articles/797/developing-a-new-transformer-using-the-fme-plug-in.html).
+2. Set the environment variable *FME_HOME* to the location of your FME installation with installed FME SDK.
+3. Open the solution file in root folder and build your desired architecture (x86 or x64).
 
-  The C++/CLI project defines an additional include directory to folder where the FME Plug-in SDK is located. 
-  By default, it targets to *%PROGRAMFILES%\FME\FME2017\plugins* path, you will have to change it 
-  if you have other installation path.
+  The C++/CLI project defines an additional include directory to folder where the FME Plug-in SDK is located.
+  If the build fails check whether you followed step 2.
+  
 
   ![Additional include directories](./Docs/IncludeDirectories.png)
 
